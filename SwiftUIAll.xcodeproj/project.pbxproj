@@ -16,6 +16,7 @@
 		07606D21259DD00D003B76E7 /* BaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D20259DD00D003B76E7 /* BaseListView.swift */; };
 		07606D25259DD81F003B76E7 /* LayoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D24259DD81F003B76E7 /* LayoutListView.swift */; };
 		07606D2F259DE0C6003B76E7 /* JbbDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D2E259DE0C6003B76E7 /* JbbDefine.swift */; };
+		29BC880A259F713300A23548 /* ThreeDScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC8809259F713300A23548 /* ThreeDScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		07606D20259DD00D003B76E7 /* BaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListView.swift; sourceTree = "<group>"; };
 		07606D24259DD81F003B76E7 /* LayoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutListView.swift; sourceTree = "<group>"; };
 		07606D2E259DE0C6003B76E7 /* JbbDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JbbDefine.swift; sourceTree = "<group>"; };
+		29BC8809259F713300A23548 /* ThreeDScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +64,9 @@
 		07606D07259DBB2A003B76E7 /* SwiftUIAll */ = {
 			isa = PBXGroup;
 			children = (
-				07606D28259DDFFF003B76E7 /* 工具类 */,
-				07606D1E259DCB52003B76E7 /* 首页列表 */,
-				07606D23259DD7E9003B76E7 /* 布局 */,
+				29BC8801259F5FEA00A23548 /* JBBHomeView */,
+				07606D28259DDFFF003B76E7 /* JBBTool */,
+				29BC8802259F609500A23548 /* JBBPage */,
 				07606D08259DBB2A003B76E7 /* AppDelegate.swift */,
 				07606D0A259DBB2A003B76E7 /* SceneDelegate.swift */,
 				07606D0C259DBB2A003B76E7 /* ContentView.swift */,
@@ -84,28 +86,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		07606D1E259DCB52003B76E7 /* 首页列表 */ = {
-			isa = PBXGroup;
-			children = (
-				07606D20259DD00D003B76E7 /* BaseListView.swift */,
-			);
-			path = "首页列表";
-			sourceTree = "<group>";
-		};
-		07606D23259DD7E9003B76E7 /* 布局 */ = {
-			isa = PBXGroup;
-			children = (
-				07606D24259DD81F003B76E7 /* LayoutListView.swift */,
-			);
-			path = "布局";
-			sourceTree = "<group>";
-		};
-		07606D28259DDFFF003B76E7 /* 工具类 */ = {
+		07606D28259DDFFF003B76E7 /* JBBTool */ = {
 			isa = PBXGroup;
 			children = (
 				07606D2E259DE0C6003B76E7 /* JbbDefine.swift */,
 			);
-			path = "工具类";
+			path = JBBTool;
+			sourceTree = "<group>";
+		};
+		29BC8801259F5FEA00A23548 /* JBBHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				07606D24259DD81F003B76E7 /* LayoutListView.swift */,
+				07606D20259DD00D003B76E7 /* BaseListView.swift */,
+			);
+			path = JBBHomeView;
+			sourceTree = "<group>";
+		};
+		29BC8802259F609500A23548 /* JBBPage */ = {
+			isa = PBXGroup;
+			children = (
+				29BC8809259F713300A23548 /* ThreeDScrollView.swift */,
+			);
+			path = JBBPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07606D09259DBB2A003B76E7 /* AppDelegate.swift in Sources */,
+				29BC880A259F713300A23548 /* ThreeDScrollView.swift in Sources */,
 				07606D2F259DE0C6003B76E7 /* JbbDefine.swift in Sources */,
 				07606D25259DD81F003B76E7 /* LayoutListView.swift in Sources */,
 				07606D0B259DBB2A003B76E7 /* SceneDelegate.swift in Sources */,
@@ -252,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -307,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -327,6 +331,7 @@
 				DEVELOPMENT_TEAM = F7YBM7MWE6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIAll/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,6 +353,7 @@
 				DEVELOPMENT_TEAM = F7YBM7MWE6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIAll/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

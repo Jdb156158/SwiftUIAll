@@ -48,7 +48,7 @@ struct ContentView: View {
                 Text("This is the second tab.")
             }.tabItem {
                 Image.init(systemName: "b.circle")
-                Text("扩展").font(.subheadline)
+                Text("绘图").font(.subheadline)
             }
 
             //Tab3
