@@ -17,6 +17,8 @@
 		07606D25259DD81F003B76E7 /* LayoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D24259DD81F003B76E7 /* LayoutListView.swift */; };
 		07606D2F259DE0C6003B76E7 /* JbbDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D2E259DE0C6003B76E7 /* JbbDefine.swift */; };
 		29BC880A259F713300A23548 /* ThreeDScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC8809259F713300A23548 /* ThreeDScrollView.swift */; };
+		29BC882F25A0ACAA00A23548 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC882E25A0ACAA00A23548 /* RingView.swift */; };
+		29BC883225A0ADF800A23548 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883125A0ADF800A23548 /* Modifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		07606D24259DD81F003B76E7 /* LayoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutListView.swift; sourceTree = "<group>"; };
 		07606D2E259DE0C6003B76E7 /* JbbDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JbbDefine.swift; sourceTree = "<group>"; };
 		29BC8809259F713300A23548 /* ThreeDScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDScrollView.swift; sourceTree = "<group>"; };
+		29BC882E25A0ACAA00A23548 /* RingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		29BC883125A0ADF800A23548 /* Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				29BC8801259F5FEA00A23548 /* JBBHomeView */,
 				07606D28259DDFFF003B76E7 /* JBBTool */,
 				29BC8802259F609500A23548 /* JBBPage */,
+				29BC882D25A0ABCB00A23548 /* CustomPage */,
 				07606D08259DBB2A003B76E7 /* AppDelegate.swift */,
 				07606D0A259DBB2A003B76E7 /* SceneDelegate.swift */,
 				07606D0C259DBB2A003B76E7 /* ContentView.swift */,
@@ -109,6 +114,15 @@
 				29BC8809259F713300A23548 /* ThreeDScrollView.swift */,
 			);
 			path = JBBPage;
+			sourceTree = "<group>";
+		};
+		29BC882D25A0ABCB00A23548 /* CustomPage */ = {
+			isa = PBXGroup;
+			children = (
+				29BC883125A0ADF800A23548 /* Modifiers.swift */,
+				29BC882E25A0ACAA00A23548 /* RingView.swift */,
+			);
+			path = CustomPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +199,10 @@
 				29BC880A259F713300A23548 /* ThreeDScrollView.swift in Sources */,
 				07606D2F259DE0C6003B76E7 /* JbbDefine.swift in Sources */,
 				07606D25259DD81F003B76E7 /* LayoutListView.swift in Sources */,
+				29BC882F25A0ACAA00A23548 /* RingView.swift in Sources */,
 				07606D0B259DBB2A003B76E7 /* SceneDelegate.swift in Sources */,
 				07606D0D259DBB2A003B76E7 /* ContentView.swift in Sources */,
+				29BC883225A0ADF800A23548 /* Modifiers.swift in Sources */,
 				07606D21259DD00D003B76E7 /* BaseListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
