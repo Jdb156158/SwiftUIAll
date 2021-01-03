@@ -19,6 +19,14 @@
 		29BC880A259F713300A23548 /* ThreeDScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC8809259F713300A23548 /* ThreeDScrollView.swift */; };
 		29BC882F25A0ACAA00A23548 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC882E25A0ACAA00A23548 /* RingView.swift */; };
 		29BC883225A0ADF800A23548 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883125A0ADF800A23548 /* Modifiers.swift */; };
+		29BC883F25A0C6DF00A23548 /* TextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883625A0C6DE00A23548 /* TextPage.swift */; };
+		29BC884025A0C6DF00A23548 /* TextFieldPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883725A0C6DE00A23548 /* TextFieldPage.swift */; };
+		29BC884125A0C6DF00A23548 /* ButtonPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883925A0C6DE00A23548 /* ButtonPage.swift */; };
+		29BC884225A0C6DF00A23548 /* EditButtonPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883A25A0C6DE00A23548 /* EditButtonPage.swift */; };
+		29BC884325A0C6DF00A23548 /* NavigationButtonPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883B25A0C6DE00A23548 /* NavigationButtonPage.swift */; };
+		29BC884425A0C6DF00A23548 /* ImagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883D25A0C6DE00A23548 /* ImagePage.swift */; };
+		29BC884525A0C6DF00A23548 /* WebImagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883E25A0C6DE00A23548 /* WebImagePage.swift */; };
+		29BC884825A0C80C00A23548 /* PageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC884725A0C80C00A23548 /* PageRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +44,14 @@
 		29BC8809259F713300A23548 /* ThreeDScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDScrollView.swift; sourceTree = "<group>"; };
 		29BC882E25A0ACAA00A23548 /* RingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		29BC883125A0ADF800A23548 /* Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		29BC883625A0C6DE00A23548 /* TextPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPage.swift; sourceTree = "<group>"; };
+		29BC883725A0C6DE00A23548 /* TextFieldPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldPage.swift; sourceTree = "<group>"; };
+		29BC883925A0C6DE00A23548 /* ButtonPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPage.swift; sourceTree = "<group>"; };
+		29BC883A25A0C6DE00A23548 /* EditButtonPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditButtonPage.swift; sourceTree = "<group>"; };
+		29BC883B25A0C6DE00A23548 /* NavigationButtonPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationButtonPage.swift; sourceTree = "<group>"; };
+		29BC883D25A0C6DE00A23548 /* ImagePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePage.swift; sourceTree = "<group>"; };
+		29BC883E25A0C6DE00A23548 /* WebImagePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebImagePage.swift; sourceTree = "<group>"; };
+		29BC884725A0C80C00A23548 /* PageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +127,10 @@
 		29BC8802259F609500A23548 /* JBBPage */ = {
 			isa = PBXGroup;
 			children = (
+				29BC883825A0C6DE00A23548 /* Button */,
+				29BC883C25A0C6DE00A23548 /* Image */,
+				29BC883525A0C6DE00A23548 /* Text */,
+				29BC884725A0C80C00A23548 /* PageRow.swift */,
 				29BC8809259F713300A23548 /* ThreeDScrollView.swift */,
 			);
 			path = JBBPage;
@@ -123,6 +143,34 @@
 				29BC882E25A0ACAA00A23548 /* RingView.swift */,
 			);
 			path = CustomPage;
+			sourceTree = "<group>";
+		};
+		29BC883525A0C6DE00A23548 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				29BC883625A0C6DE00A23548 /* TextPage.swift */,
+				29BC883725A0C6DE00A23548 /* TextFieldPage.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		29BC883825A0C6DE00A23548 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				29BC883925A0C6DE00A23548 /* ButtonPage.swift */,
+				29BC883A25A0C6DE00A23548 /* EditButtonPage.swift */,
+				29BC883B25A0C6DE00A23548 /* NavigationButtonPage.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		29BC883C25A0C6DE00A23548 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				29BC883D25A0C6DE00A23548 /* ImagePage.swift */,
+				29BC883E25A0C6DE00A23548 /* WebImagePage.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,15 +243,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BC884325A0C6DF00A23548 /* NavigationButtonPage.swift in Sources */,
+				29BC884025A0C6DF00A23548 /* TextFieldPage.swift in Sources */,
 				07606D09259DBB2A003B76E7 /* AppDelegate.swift in Sources */,
+				29BC884825A0C80C00A23548 /* PageRow.swift in Sources */,
+				29BC883F25A0C6DF00A23548 /* TextPage.swift in Sources */,
 				29BC880A259F713300A23548 /* ThreeDScrollView.swift in Sources */,
+				29BC884125A0C6DF00A23548 /* ButtonPage.swift in Sources */,
 				07606D2F259DE0C6003B76E7 /* JbbDefine.swift in Sources */,
 				07606D25259DD81F003B76E7 /* LayoutListView.swift in Sources */,
 				29BC882F25A0ACAA00A23548 /* RingView.swift in Sources */,
 				07606D0B259DBB2A003B76E7 /* SceneDelegate.swift in Sources */,
+				29BC884425A0C6DF00A23548 /* ImagePage.swift in Sources */,
+				29BC884525A0C6DF00A23548 /* WebImagePage.swift in Sources */,
 				07606D0D259DBB2A003B76E7 /* ContentView.swift in Sources */,
 				29BC883225A0ADF800A23548 /* Modifiers.swift in Sources */,
 				07606D21259DD00D003B76E7 /* BaseListView.swift in Sources */,
+				29BC884225A0C6DF00A23548 /* EditButtonPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

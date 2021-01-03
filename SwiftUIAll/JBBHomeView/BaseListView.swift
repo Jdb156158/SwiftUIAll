@@ -8,19 +8,35 @@
 import SwiftUI
 
 struct BaseListView: View {
+    
+    @State var showAlert = false
+    @State var showPop = false
+    
     var body: some View {
         List {
             
             Section() {
-                WatchRingsView()
-//                ScrollView(.horizontal, showsIndicators: false) {
-//                    WatchRingsView()
-//                         //.padding(.horizontal, 30)
-//                        //.padding(.bottom, 5)
-//                        .onTapGesture {
-//                            //可加点击事件
-//                        }
-//                }
+                ScrollView(.horizontal, showsIndicators: false) {
+                    WatchRingsView()
+                        .padding(.horizontal, 0)
+                        .padding(.vertical, 0)
+                        .onTapGesture {
+                            //可加点击事件
+                            self.showAlert = true
+                            //self.showPop = true
+                        }
+                }
+                .sheet(isPresented: $showPop, onDismiss: {
+                    print("dissmiss RrightNav")
+                }) {
+                    TaskRowDetail(title: "djdjkdjkjd")
+                }
+                .alert(isPresented: $showAlert, content: {
+                    Alert(title: Text("确定要支付这100000美元吗？"),
+                          message: Text("请谨慎操作\n一旦确认，钱款将立即转入对方账户"),
+                          primaryButton: .destructive(Text("确认")) { print("已转出") },
+                          secondaryButton: .cancel())
+                }).navigationBarTitle(Text("Alert"))
             }
             
             Section(header: Text("文本").foregroundColor(Color.blue)) {
@@ -79,6 +95,16 @@ struct TaskRowDetail: View {
     var body: some View {
         NavigationView {
             switch title {
+            case "Text":
+                TextPage()
+            case "TextField":
+                TextFieldPage()
+            case "SecureField":
+                TextFieldPage()
+            case "Image":
+                ImagePage()
+            case "WebImage":
+                WebImagePage()
             case "矩形":
                 Text("矩形")
                 Rectangle() //矩形
@@ -157,19 +183,19 @@ struct WatchRingsView: View {
     
     var body: some View {
  
-        HStack(spacing: 50) {
-            HStack(spacing: 12.0) {
+        HStack(spacing: 20) {
+            HStack(spacing: 20.0) {
                 RingView(color1: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), color2: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), width: 50, height: 50, percent: CGFloat(dayPercentageYear), show: .constant(true))
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Time countdown").bold().modifier(FontModifier(style: .footnote))
                     Text("Today is the \(dayYear)th day of the year").modifier(FontModifier(style: .caption))
                 }
-                .modifier(FontModifier())
+//                .modifier(FontModifier())
             }
             .padding(8)
-            .background(Color("background3"))
-            .cornerRadius(20)
-            .modifier(ShadowModifier())
+//            .background(Color("background3"))
+//            .cornerRadius(20)
+//            .modifier(ShadowModifier())
             
             Text(self.rightRunText)
                 .foregroundColor(.blue)
