@@ -11,32 +11,36 @@ struct BaseListView: View {
     
     @State var showAlert = false
     @State var showPop = false
+    @State var showModelView = false
+    @State var showSheet = false
+    
+    private var sheet: ActionSheet {
+
+        let action = ActionSheet(title: Text("Title"),
+                                 message: Text("Message"),
+                                 buttons:
+            [.default(Text("Default"), action: {
+                print("Default")
+                self.showSheet = false
+            }),.destructive(Text("destructive"), action: {
+                print("destructive")
+                self.showSheet = false
+            }),.cancel({
+                print("Cancel")
+                self.showSheet = false
+            })])
+        
+        return action
+    }
     
     var body: some View {
         List {
-            
-            Section() {
+            Section () {
                 ScrollView(.horizontal, showsIndicators: false) {
                     WatchRingsView()
                         .padding(.horizontal, 0)
                         .padding(.vertical, 0)
-                        .onTapGesture {
-                            //可加点击事件
-                            self.showAlert = true
-                            //self.showPop = true
-                        }
                 }
-                .sheet(isPresented: $showPop, onDismiss: {
-                    print("dissmiss RrightNav")
-                }) {
-                    TaskRowDetail(title: "djdjkdjkjd")
-                }
-                .alert(isPresented: $showAlert, content: {
-                    Alert(title: Text("确定要支付这100000美元吗？"),
-                          message: Text("请谨慎操作\n一旦确认，钱款将立即转入对方账户"),
-                          primaryButton: .destructive(Text("确认")) { print("已转出") },
-                          secondaryButton: .cancel())
-                }).navigationBarTitle(Text("Alert"))
             }
             
             Section(header: Text("文本").foregroundColor(Color.blue)) {
@@ -53,7 +57,6 @@ struct BaseListView: View {
             Section(header: Text("按钮").foregroundColor(Color.blue)) {
                 TaskRow(title:"Button" ,desdetail:"触发时执行操作的按钮")
                 TaskRow(title:"NavigationButton" ,desdetail:"按下触发导航跳转的按钮")
-                TaskRow(title:"PresentationButton" ,desdetail:"触发显示内容的按钮")
                 TaskRow(title:"EditButton" ,desdetail:"用于切换当前编辑模式的按钮")
             }
             
@@ -64,9 +67,69 @@ struct BaseListView: View {
                 TaskRow(title:"Slider" ,desdetail:"滑动设置指定范围的值")
                 TaskRow(title:"Stepper" ,desdetail:"可以增加或减少数值")
             }
+            
+            Section(header: Text("弹框视图").foregroundColor(Color.blue)) {
+                TaskRowNolink(title:"Alert" ,desdetail:"展示一个弹框提醒")
+                    .onTapGesture {
+                        //可加点击事件
+                        self.showAlert = true
+                    }
+                    .alert(isPresented: $showAlert, content: {
+                        Alert(title: Text("标题提示语"),
+                              message: Text("这里写提示内容的详情"),
+                              primaryButton: .destructive(Text("确认")) { print("已确认") },
+                              secondaryButton: .cancel())
+                    })
+                TaskRowNolink(title:"ActionSheet" ,desdetail:"从底部弹出一个选择视图")
+                    .onTapGesture {
+                        //可加点击事件
+                        self.showSheet = true
+                    }
+                    .actionSheet(isPresented: $showSheet, content: {sheet})
+                TaskRowNolink(title:"Model" ,desdetail:"弹出一个模态视图")
+                    .onTapGesture {
+                        //可加点击事件
+                        self.showModelView = true
+                    }
+                    .sheet(isPresented: $showModelView, onDismiss: {
+                        print("dissmiss Model")
+                    }) {
+                        ZStack {
+                            Text("This is Model view.")
+                        }
+                    }
+                TaskRowNolink(title:"Popover" ,desdetail:"Pop出一个视图")
+                    .onTapGesture {
+                        //可加点击事件
+                        self.showPop = true
+                    }
+                    .sheet(isPresented: $showPop, onDismiss: {
+                        print("dissmiss Model")
+                    }) {
+                        ZStack {
+                            Text("This is Popover view.")
+                        }
+                    }
+            }
 
         }
         
+    }
+}
+
+struct TaskRowNolink: View {
+    
+    var title: String
+    var desdetail: String
+    
+    var body: some View {
+        VStack (alignment:.leading,spacing: 10){//控制内部控件间隔和靠左居齐
+            Text(title)
+                .bold()
+                //.font(.system(size: 18))
+            Text(desdetail)
+                .font(.system(size: 14))
+        }.frame(width: KScreenWidth,alignment:.leading).background(Color.white)
     }
 }
 
@@ -105,6 +168,22 @@ struct TaskRowDetail: View {
                 ImagePage()
             case "WebImage":
                 WebImagePage()
+            case "Button":
+                ButtonPage()
+            case "NavigationButton":
+                NavigationButtonPage()
+            case "EditButton":
+                EditButtonPage()
+            case "Picker":
+                PickerPage()
+            case "DatePicker":
+                DatePickerPage()
+            case "Toggle":
+                TogglePage()
+            case "Slider":
+                SliderPage()
+            case "Stepper":
+                StepperPage()
             case "矩形":
                 Text("矩形")
                 Rectangle() //矩形
@@ -183,7 +262,7 @@ struct WatchRingsView: View {
     
     var body: some View {
  
-        HStack(spacing: 20) {
+        HStack(spacing: KScreenWidth-50-280) {
             HStack(spacing: 20.0) {
                 RingView(color1: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), color2: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), width: 50, height: 50, percent: CGFloat(dayPercentageYear), show: .constant(true))
                 VStack(alignment: .leading, spacing: 4) {

@@ -42,7 +42,6 @@ struct TextFieldPage : View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
         }.offset(y: -150)
-            .navigationBarTitle(Text("TextField"))
 
     }
     

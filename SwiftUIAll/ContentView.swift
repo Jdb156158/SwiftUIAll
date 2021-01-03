@@ -9,8 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     
+    enum Tabs{
+        case tab1, tab2
+    }
+    
     @State var isLeftNav = false
     @State var isRightNav = false
+    @State var tabSelection: Tabs = .tab1
+    
+    func returnNaviBarTitle(tabSelection: Tabs) -> String{
+        switch tabSelection{
+            case .tab1: return "基础控件"
+            case .tab2: return "Tab2"
+        }
+    }
+    
+    func returnNaviBarHidden(tabSelection: Tabs) -> Bool{
+        switch tabSelection{
+            case .tab1: return false
+            case .tab2: return true
+        }
+    }
     
     init() {
         //修改导航栏文字颜色
@@ -22,8 +41,33 @@ struct ContentView: View {
     
     
     var body: some View {
+        NavigationView{
+            TabView(selection: $tabSelection){
+                Tab1View()
+                .tabItem {
+                    Image.init(systemName: "a.circle")
+                    Text("基础").font(.subheadline)
+                }
+                .tag(Tabs.tab1)
+                
+                NavigationLink(destination: TextPage()){
+                    VStack{
+                        Text("Here is Tab 2")
+                        Text("Tap me to NavigatedView")
+                    }
+                }
+                .tabItem {
+                    Image.init(systemName: "b.circle")
+                    Text("布局").font(.subheadline)
+                }
+                .tag(Tabs.tab2)
+            }
+            .navigationBarTitle(returnNaviBarTitle(tabSelection: self.tabSelection))
+            .navigationBarHidden(returnNaviBarHidden(tabSelection: self.tabSelection))
+            .navigationBarItems(leading: leftNavButton, trailing: rightNavButton)
+        }
+        /*
         TabView {
-            
             //Tab1
             NavigationView {
                 BaseListView()
@@ -58,7 +102,7 @@ struct ContentView: View {
                 Image.init(systemName: "c.circle")
                 Text("设置").font(.subheadline)
             }
-        }
+        }*/
     }
     
     var leftNavButton: some View {

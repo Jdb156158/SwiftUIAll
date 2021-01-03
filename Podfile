@@ -9,6 +9,7 @@ target 'SwiftUIAll' do
   use_frameworks!
 
   # Pods for SwiftUIAll
-  pod "MarkdownView"
+  # pod "MarkdownView"
+  pod 'WaterfallGrid'
 
 end

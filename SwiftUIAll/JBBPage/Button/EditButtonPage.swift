@@ -15,15 +15,14 @@ struct EditButtonPage : View {
     
     var body: some View {
         List {
-            
             ForEach(source.items, id: \.self) { idx in
                 PageRow(title: "\(idx)")
-                }
-                .onDelete(perform: deletePlace)
-                .onMove(perform: movePlace)
             }
-            .navigationBarTitle(Text("Edit Row"), displayMode: .large)
-            .navigationBarItems(trailing: EditButton())
+            .onDelete(perform: deletePlace)
+            .onMove(perform: movePlace)
+        }
+        //.navigationBarHidden(true)
+        .navigationBarItems(trailing: EditButton())
     }
     
     func deletePlace(at offset: IndexSet) {
