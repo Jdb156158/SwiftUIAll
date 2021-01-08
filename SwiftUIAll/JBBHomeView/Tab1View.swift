@@ -13,6 +13,9 @@ struct Tab1View: View {
     @State var showSheet = false
     @State var showPopover = false
     
+    @State var isLeftNav = false
+    @State var isRightNav = false
+    
     private var sheet: ActionSheet {
 
         let action = ActionSheet(title: Text("Title"),
@@ -128,7 +131,6 @@ struct Tab1View: View {
             .padding(.leading,16)
         }
     }
-    
     
 }
 

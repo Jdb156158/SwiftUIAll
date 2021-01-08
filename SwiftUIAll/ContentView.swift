@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     enum Tabs{
-        case tab1, tab2
+        case tab1, tab2, tab3
     }
     
     @State var isLeftNav = false
@@ -19,15 +19,17 @@ struct ContentView: View {
     
     func returnNaviBarTitle(tabSelection: Tabs) -> String{
         switch tabSelection{
-            case .tab1: return "基础控件"
-            case .tab2: return "Tab2"
+        case .tab1: return "基础控件"
+        case .tab2: return "布局"
+        case .tab3: return "自定义"
         }
     }
     
     func returnNaviBarHidden(tabSelection: Tabs) -> Bool{
         switch tabSelection{
-            case .tab1: return false
-            case .tab2: return true
+        case .tab1: return false
+        case .tab2: return true
+        case .tab3: return true
         }
     }
     
@@ -36,6 +38,11 @@ struct ContentView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.systemBlue]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.systemBlue]
         UINavigationBar.appearance().tintColor = .systemBlue
+        
+        //透明导航
+        //UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        //UINavigationBar.appearance().shadowImage = UIImage()
+        //UINavigationBar.appearance().backgroundColor = .white
         
         //修改底部tabbar的背景颜色
         UITabBar.appearance().backgroundColor = UIColor.white
@@ -52,23 +59,24 @@ struct ContentView: View {
                 }
                 .tag(Tabs.tab1)
                 
-                NavigationLink(destination: TextPage()){
-                    VStack{
-                        Text("Here is Tab 2")
-                        Text("Tap me to NavigatedView")
-                    }
-                }
+                Tab2View()
                 .tabItem {
                     Image.init(systemName: "b.circle")
                     Text("布局").font(.subheadline)
                 }
                 .tag(Tabs.tab2)
+                
+                Tab3View()
+                .tabItem {
+                    Image.init(systemName: "c.circle")
+                    Text("自定义").font(.subheadline)
+                }
+                .tag(Tabs.tab3)
             }
-            .navigationBarTitle(returnNaviBarTitle(tabSelection: self.tabSelection))
+            .navigationBarTitle(returnNaviBarTitle(tabSelection: self.tabSelection),displayMode: .inline)
             .navigationBarHidden(returnNaviBarHidden(tabSelection: self.tabSelection))
             .navigationBarItems(leading: leftNavButton, trailing: rightNavButton)
         }
-
     }
     
     var leftNavButton: some View {

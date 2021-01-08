@@ -14,8 +14,9 @@
 		07606D12259DBB2D003B76E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07606D11259DBB2D003B76E7 /* Preview Assets.xcassets */; };
 		07606D15259DBB2D003B76E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07606D13259DBB2D003B76E7 /* LaunchScreen.storyboard */; };
 		07606D21259DD00D003B76E7 /* BaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D20259DD00D003B76E7 /* BaseListView.swift */; };
-		07606D25259DD81F003B76E7 /* LayoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D24259DD81F003B76E7 /* LayoutListView.swift */; };
 		07606D2F259DE0C6003B76E7 /* JbbDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D2E259DE0C6003B76E7 /* JbbDefine.swift */; };
+		07D7462925A863D600F731AE /* Tab2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7462825A863D600F731AE /* Tab2View.swift */; };
+		07D7462D25A863F100F731AE /* Tab3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7462C25A863F100F731AE /* Tab3View.swift */; };
 		07E2F6D825A81427004A6BD6 /* PopoverPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2F6D725A81427004A6BD6 /* PopoverPage.swift */; };
 		29BC880A259F713300A23548 /* ThreeDScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC8809259F713300A23548 /* ThreeDScrollView.swift */; };
 		29BC882F25A0ACAA00A23548 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC882E25A0ACAA00A23548 /* RingView.swift */; };
@@ -49,8 +50,9 @@
 		07606D14259DBB2D003B76E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07606D16259DBB2D003B76E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07606D20259DD00D003B76E7 /* BaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListView.swift; sourceTree = "<group>"; };
-		07606D24259DD81F003B76E7 /* LayoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutListView.swift; sourceTree = "<group>"; };
 		07606D2E259DE0C6003B76E7 /* JbbDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JbbDefine.swift; sourceTree = "<group>"; };
+		07D7462825A863D600F731AE /* Tab2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2View.swift; sourceTree = "<group>"; };
+		07D7462C25A863F100F731AE /* Tab3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3View.swift; sourceTree = "<group>"; };
 		07E2F6D725A81427004A6BD6 /* PopoverPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPage.swift; sourceTree = "<group>"; };
 		1936A743E201066741CEF767 /* Pods_SwiftUIAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BC8809259F713300A23548 /* ThreeDScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDScrollView.swift; sourceTree = "<group>"; };
@@ -153,9 +155,10 @@
 		29BC8801259F5FEA00A23548 /* JBBHomeView */ = {
 			isa = PBXGroup;
 			children = (
-				07606D24259DD81F003B76E7 /* LayoutListView.swift */,
 				07606D20259DD00D003B76E7 /* BaseListView.swift */,
 				29BC886525A1B13000A23548 /* Tab1View.swift */,
+				07D7462825A863D600F731AE /* Tab2View.swift */,
+				07D7462C25A863F100F731AE /* Tab3View.swift */,
 			);
 			path = JBBHomeView;
 			sourceTree = "<group>";
@@ -381,15 +384,16 @@
 				29BC884325A0C6DF00A23548 /* NavigationButtonPage.swift in Sources */,
 				29BC884025A0C6DF00A23548 /* TextFieldPage.swift in Sources */,
 				29BC887625A1CAFB00A23548 /* SliderPage.swift in Sources */,
+				07D7462D25A863F100F731AE /* Tab3View.swift in Sources */,
 				07606D09259DBB2A003B76E7 /* AppDelegate.swift in Sources */,
 				29BC884825A0C80C00A23548 /* PageRow.swift in Sources */,
 				29BC883F25A0C6DF00A23548 /* TextPage.swift in Sources */,
 				29BC880A259F713300A23548 /* ThreeDScrollView.swift in Sources */,
+				07D7462925A863D600F731AE /* Tab2View.swift in Sources */,
 				29BC884125A0C6DF00A23548 /* ButtonPage.swift in Sources */,
 				07606D2F259DE0C6003B76E7 /* JbbDefine.swift in Sources */,
 				29BC886625A1B13000A23548 /* Tab1View.swift in Sources */,
 				29BC885125A193CD00A23548 /* Tutorial.swift in Sources */,
-				07606D25259DD81F003B76E7 /* LayoutListView.swift in Sources */,
 				29BC887B25A1CAFB00A23548 /* StepperPage.swift in Sources */,
 				29BC882F25A0ACAA00A23548 /* RingView.swift in Sources */,
 				07606D0B259DBB2A003B76E7 /* SceneDelegate.swift in Sources */,
