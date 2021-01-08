@@ -88,21 +88,21 @@ var tutorials = [
         progress: 20.0
     ),
     Tutorial(
-        title: "Toggle1",
+        title: "Toggle",
         subtitle: "开关状态切换，可自定义颜色等\nSwitch state switch, can customize the color, etc",
         color: Color(#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)),
         image: "Logo ProtoPie",
         progress: 20.0
     ),
     Tutorial(
-        title: "Slider1",
+        title: "Slider",
         subtitle: "滑动设置指定范围的值\nSlides the value of the specified range",
         color: Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)),
         image: "Logo Principle",
         progress: 20.0
     ),
     Tutorial(
-        title: "Stepper1",
+        title: "Stepper",
         subtitle: "可以增加或减少数值\nYou can increase or decrease the value",
         color: Color(#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)),
         image: "Logo AE",

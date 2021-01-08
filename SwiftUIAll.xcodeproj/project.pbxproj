@@ -16,6 +16,7 @@
 		07606D21259DD00D003B76E7 /* BaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D20259DD00D003B76E7 /* BaseListView.swift */; };
 		07606D25259DD81F003B76E7 /* LayoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D24259DD81F003B76E7 /* LayoutListView.swift */; };
 		07606D2F259DE0C6003B76E7 /* JbbDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606D2E259DE0C6003B76E7 /* JbbDefine.swift */; };
+		07E2F6D825A81427004A6BD6 /* PopoverPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2F6D725A81427004A6BD6 /* PopoverPage.swift */; };
 		29BC880A259F713300A23548 /* ThreeDScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC8809259F713300A23548 /* ThreeDScrollView.swift */; };
 		29BC882F25A0ACAA00A23548 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC882E25A0ACAA00A23548 /* RingView.swift */; };
 		29BC883225A0ADF800A23548 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC883125A0ADF800A23548 /* Modifiers.swift */; };
@@ -31,7 +32,6 @@
 		29BC886625A1B13000A23548 /* Tab1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC886525A1B13000A23548 /* Tab1View.swift */; };
 		29BC886D25A1B37900A23548 /* TutorialItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC886C25A1B37900A23548 /* TutorialItem.swift */; };
 		29BC887625A1CAFB00A23548 /* SliderPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC887025A1CAFA00A23548 /* SliderPage.swift */; };
-		29BC887725A1CAFB00A23548 /* SegmentedControlPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC887125A1CAFA00A23548 /* SegmentedControlPage.swift */; };
 		29BC887825A1CAFB00A23548 /* DatePickerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC887225A1CAFB00A23548 /* DatePickerPage.swift */; };
 		29BC887925A1CAFB00A23548 /* TogglePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC887325A1CAFB00A23548 /* TogglePage.swift */; };
 		29BC887A25A1CAFB00A23548 /* PickerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC887425A1CAFB00A23548 /* PickerPage.swift */; };
@@ -51,6 +51,7 @@
 		07606D20259DD00D003B76E7 /* BaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListView.swift; sourceTree = "<group>"; };
 		07606D24259DD81F003B76E7 /* LayoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutListView.swift; sourceTree = "<group>"; };
 		07606D2E259DE0C6003B76E7 /* JbbDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JbbDefine.swift; sourceTree = "<group>"; };
+		07E2F6D725A81427004A6BD6 /* PopoverPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPage.swift; sourceTree = "<group>"; };
 		1936A743E201066741CEF767 /* Pods_SwiftUIAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BC8809259F713300A23548 /* ThreeDScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDScrollView.swift; sourceTree = "<group>"; };
 		29BC882E25A0ACAA00A23548 /* RingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		29BC886525A1B13000A23548 /* Tab1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1View.swift; sourceTree = "<group>"; };
 		29BC886C25A1B37900A23548 /* TutorialItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialItem.swift; sourceTree = "<group>"; };
 		29BC887025A1CAFA00A23548 /* SliderPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderPage.swift; sourceTree = "<group>"; };
-		29BC887125A1CAFA00A23548 /* SegmentedControlPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlPage.swift; sourceTree = "<group>"; };
 		29BC887225A1CAFB00A23548 /* DatePickerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerPage.swift; sourceTree = "<group>"; };
 		29BC887325A1CAFB00A23548 /* TogglePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglePage.swift; sourceTree = "<group>"; };
 		29BC887425A1CAFB00A23548 /* PickerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerPage.swift; sourceTree = "<group>"; };
@@ -114,7 +114,6 @@
 				29BC8801259F5FEA00A23548 /* JBBHomeView */,
 				07606D28259DDFFF003B76E7 /* JBBTool */,
 				29BC8802259F609500A23548 /* JBBPage */,
-				29BC885425A198C800A23548 /* ThirdLib */,
 				29BC882D25A0ABCB00A23548 /* CustomPage */,
 				07606D08259DBB2A003B76E7 /* AppDelegate.swift */,
 				07606D0A259DBB2A003B76E7 /* SceneDelegate.swift */,
@@ -143,6 +142,14 @@
 			path = JBBTool;
 			sourceTree = "<group>";
 		};
+		07E2F6D525A811EF004A6BD6 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				07E2F6D725A81427004A6BD6 /* PopoverPage.swift */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
 		29BC8801259F5FEA00A23548 /* JBBHomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +163,7 @@
 		29BC8802259F609500A23548 /* JBBPage */ = {
 			isa = PBXGroup;
 			children = (
+				07E2F6D525A811EF004A6BD6 /* Popover */,
 				29BC886F25A1CAFA00A23548 /* Picker */,
 				29BC883825A0C6DE00A23548 /* Button */,
 				29BC883C25A0C6DE00A23548 /* Image */,
@@ -211,13 +219,6 @@
 			path = JBBModel;
 			sourceTree = "<group>";
 		};
-		29BC885425A198C800A23548 /* ThirdLib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdLib;
-			sourceTree = "<group>";
-		};
 		29BC886A25A1B34A00A23548 /* JBBView */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				29BC887025A1CAFA00A23548 /* SliderPage.swift */,
-				29BC887125A1CAFA00A23548 /* SegmentedControlPage.swift */,
 				29BC887225A1CAFB00A23548 /* DatePickerPage.swift */,
 				29BC887325A1CAFB00A23548 /* TogglePage.swift */,
 				29BC887425A1CAFB00A23548 /* PickerPage.swift */,
@@ -400,7 +400,7 @@
 				29BC887925A1CAFB00A23548 /* TogglePage.swift in Sources */,
 				29BC886D25A1B37900A23548 /* TutorialItem.swift in Sources */,
 				29BC883225A0ADF800A23548 /* Modifiers.swift in Sources */,
-				29BC887725A1CAFB00A23548 /* SegmentedControlPage.swift in Sources */,
+				07E2F6D825A81427004A6BD6 /* PopoverPage.swift in Sources */,
 				07606D21259DD00D003B76E7 /* BaseListView.swift in Sources */,
 				29BC887A25A1CAFB00A23548 /* PickerPage.swift in Sources */,
 				29BC884225A0C6DF00A23548 /* EditButtonPage.swift in Sources */,
@@ -472,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -527,7 +527,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -548,7 +548,7 @@
 				DEVELOPMENT_TEAM = F7YBM7MWE6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIAll/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -571,7 +571,7 @@
 				DEVELOPMENT_TEAM = F7YBM7MWE6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIAll/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

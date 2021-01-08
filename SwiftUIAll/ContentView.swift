@@ -37,6 +37,8 @@ struct ContentView: View {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.systemBlue]
         UINavigationBar.appearance().tintColor = .systemBlue
         
+        //修改底部tabbar的背景颜色
+        UITabBar.appearance().backgroundColor = UIColor.white
     }
     
     
@@ -66,43 +68,7 @@ struct ContentView: View {
             .navigationBarHidden(returnNaviBarHidden(tabSelection: self.tabSelection))
             .navigationBarItems(leading: leftNavButton, trailing: rightNavButton)
         }
-        /*
-        TabView {
-            //Tab1
-            NavigationView {
-                BaseListView()
-                .navigationBarTitle(Text("基础控件"))
-                .navigationBarItems(leading: leftNavButton, trailing: rightNavButton)
-            }.tabItem {
-                Image.init(systemName: "a.circle")
-                Text("基础").font(.subheadline)
-            }
-            
-            //Tab2
-            NavigationView {
-                LayoutListView()
-                .navigationBarTitle(Text("布局"))
-            }.tabItem {
-                Image.init(systemName: "b.circle")
-                Text("布局").font(.subheadline)
-            }
 
-            //Tab2
-            NavigationView {
-                Text("This is the second tab.")
-            }.tabItem {
-                Image.init(systemName: "b.circle")
-                Text("绘图").font(.subheadline)
-            }
-
-            //Tab3
-            NavigationView {
-                Text("This is the second tab.")
-            }.tabItem {
-                Image.init(systemName: "c.circle")
-                Text("设置").font(.subheadline)
-            }
-        }*/
     }
     
     var leftNavButton: some View {

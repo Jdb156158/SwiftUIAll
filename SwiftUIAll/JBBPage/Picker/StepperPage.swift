@@ -14,12 +14,11 @@ struct StepperPage : View {
     @State var value = 0
     
     var body: some View {
-        HStack {
-            Stepper(value: $value, step: 2, onEditingChanged: { c in
-                print(c)
-            }) {
-                Text("Stepper Value: \(self.value)")
-            }.padding(50)
+        Stepper(value: $value, step: 2, onEditingChanged: { c in
+            print(c)
+        }) {
+            Text("\(self.value)")
+                .foregroundColor(.white)
         }
     }
 }

@@ -10,15 +10,14 @@ import SwiftUI
 import Combine
 struct TogglePage : View {
     
-    @State var isOn = false
+    @State var isOn = true
     
     var body: some View {
-        HStack {
-            Toggle(isOn: $isOn) {
-                Text("State: \(self.isOn == true ? "开":"关")")
-            }.padding(20)
-            Spacer()
+        Toggle(isOn: $isOn) {
+            Text("\(self.isOn == true ? "开":"关")")
+                .foregroundColor(.white)
         }
+        .frame(width: KScreenWidth/2-16*4, height: 30, alignment: .center)
     }
 }
 

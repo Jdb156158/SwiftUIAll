@@ -34,7 +34,13 @@ struct TutorialItem: View {
                 .font(.footnote)
                 .foregroundColor(Color.white.opacity(0.8))
             Spacer()
-            //ProgressView(progress: tutorial.progress)
+            if (tutorial.title == "Toggle"){
+                TogglePage()
+            }else if(tutorial.title == "Slider"){
+                SliderPage()
+            }else if(tutorial.title == "Stepper"){
+                StepperPage()
+            }
         }
         .padding(16)
         .background(tutorial.color)

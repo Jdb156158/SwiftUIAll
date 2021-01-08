@@ -14,12 +14,8 @@ struct SliderPage : View {
     @State var rating = 0.5
 
     var body: some View {
-        VStack {
-            Text("Slider Value: \(self.rating)")
-            Slider(value: $rating)
-                .padding(30)
-            
-        }
+        Slider(value: $rating)
+            .frame(width: KScreenWidth/2-16*4, height: 30, alignment: .center)
     }
 }
 
